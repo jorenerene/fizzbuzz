@@ -4,18 +4,9 @@ Write a program that prints the numbers from 1 to 100. But for multiples of thre
 */
 
 function fizzbuzz () {
-	for (var x = 1; x <= 100; x++) {
-		y = x;
-		
-		if (x % 3 == 0 || x % 5 == 0) {
-			y = x % 3 == 0 ? 'Fizz' : '';
-			if (x % 5 == 0) y += 'Buzz';
-		}
-		
-		console.log (y);
+	for (var x = 1; x <= 100; x ++) {
+		console.log (x % 3 === 0 ? ( x % 5 === 0 ? 'FizzBuzz' : 'Fizz') : (x % 5 === 0 ? 'Buzz' : x));
 	}
-
-	return true;
 }
 
 fizzbuzz ();
